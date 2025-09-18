@@ -7,27 +7,39 @@ It has been entirely redesigned from the ROS1 package to provide a good basis to
 without requiring modification of the node itself. The majority of the device configuration settings are 
 exposed as ROS2 parameters that can be modified from a launch file. 
 
+## Configuration manual
+
+This manual has been helpful in understanding the params we are setting in this file
+
+- https://www.navtechgps.com/wp-content/uploads/assets/1/7/VN200UserManual_UM004_080514.pdf
+
+> It is also linked in https://github.com/Voyant-Photonics/vectornav/pull/1
 
 ## QuickStart
 
 Build
 
-1. git clone https://github.com/dawonn/vectornav.git -b ros2
-2. cd vectornav 
-3. colcon build
+```bash
+git clone https://github.com/Voyant-Photonics/vectornav.git -b ros2
+cd vectornav
+source /opt/ros/humble/setup.bash
+colcon build
+source install/setup.bash
+```
 
 Run with ros2 run (Option 1)
 
-4. (Terminal 1) ros2 run vectornav vectornav
-5. (Terminal 2) ros2 topic echo /vectornav/raw/common
-6. (Terminal 3) ros2 run vectornav vn_sensor_msgs
-7. (Terminal 4) ros2 topic echo /vectornav/imu
+#
+4. (Terminal 1) `ros2 run vectornav vectornav`
+5. (Terminal 2) `ros2 topic echo /vectornav/raw/common`
+6. (Terminal 3) `ros2 run vectornav vn_sensor_msgs`
+7. (Terminal 4) `ros2 topic echo /vectornav/imu`
 
 Run with ros2 launch (Option 2, uses parameters from `vectornav.yaml`)
 
-8. (Terminal 1) ros2 launch vectornav vectornav.launch.py
-9. (Terminal 2) ros2 topic echo /vectornav/raw/common
-10. (Terminal 3) ros2 topic echo /vectornav/imu
+8. (Terminal 1) `ros2 launch vectornav vectornav.launch.py`
+9. (Terminal 2) `ros2 topic echo /vectornav/raw/common`
+10. (Terminal 3) `ros2 topic echo /vectornav/imu`
 
 ## vectornav node
 
