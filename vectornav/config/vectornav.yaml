@@ -11,7 +11,7 @@ vectornav:
     # Async Output Type (ASCII)
     AsyncDataOutputType: 0           # VNOFF
     # Async output Frequency (Hz)
-    AsyncDataOutputFrequency: 20
+    AsyncDataOutputFrequency: 0
     # Sync control
     syncInMode: 3                    # SYNCINMODE_COUNT
     syncInEdge: 0                    # SYNCINEDGE_RISING
