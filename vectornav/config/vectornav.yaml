@@ -32,7 +32,7 @@ vectornav:
     BO1:
       asyncMode: 1                   # Port 1 only (no duplication)
       rateDivisor: 8                 # (800 / rateDivisor) hz
-      commonField: 0x7FFF
+      commonField: 0x7FFF            # Tweak based on 5.4 of manual if need reduce data rate
       timeField: 0x0000              # TIMEGROUP_NONE
       imuField: 0x0000               # IMUGROUP_NONE
       # set gpsField directly in source to enforce or condition
