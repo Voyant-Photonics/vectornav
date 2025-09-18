@@ -31,7 +31,7 @@ vectornav:
     # Binary output register 1
     BO1:
       asyncMode: 1                   # Port 1 only (no duplication)
-      rateDivisor: 40                # 20 Hz
+      rateDivisor: 8                 # (800 / rateDivisor) hz
       commonField: 0x7FFF
       timeField: 0x0000              # TIMEGROUP_NONE
       imuField: 0x0000               # IMUGROUP_NONE
