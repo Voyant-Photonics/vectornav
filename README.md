@@ -1,6 +1,10 @@
 Vectornav ROS Driver
 ====================
 
+> ⚠️ **Warning**
+>
+> This is a **ROS1** branch. For most use cases, please check out the `ros2` branch.
+
 A ROS node for `VectorNav` INS & GPS devices.
 
 This package provides a sensor_msg interface for the VN100, 200, & 300 
