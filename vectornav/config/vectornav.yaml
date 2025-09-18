@@ -1,3 +1,7 @@
+# This manual has been helpful in understanding the params we are setting in this file
+# https://www.navtechgps.com/wp-content/uploads/assets/1/7/VN200UserManual_UM004_080514.pdf
+# It is also linked in https://github.com/Voyant-Photonics/vectornav/pull/1
+
 vectornav:
   ros__parameters:
     port: "/dev/ttyUSB0"

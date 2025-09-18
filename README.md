@@ -7,6 +7,13 @@ It has been entirely redesigned from the ROS1 package to provide a good basis to
 without requiring modification of the node itself. The majority of the device configuration settings are 
 exposed as ROS2 parameters that can be modified from a launch file. 
 
+## Configuration manual
+
+This manual has been helpful in understanding the params we are setting in this file
+
+- https://www.navtechgps.com/wp-content/uploads/assets/1/7/VN200UserManual_UM004_080514.pdf
+
+> It is also linked in https://github.com/Voyant-Photonics/vectornav/pull/1
 
 ## QuickStart
 
