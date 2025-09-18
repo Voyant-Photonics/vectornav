@@ -1,0 +1,222 @@
+{
+  "configById": {
+    "RawMessages!3atojrk": {
+      "diffEnabled": false,
+      "diffMethod": "custom",
+      "diffTopicPath": "",
+      "showFullMessageForDiff": false,
+      "topicPath": "/vectornav/gnss",
+      "fontSize": 12
+    },
+    "RawMessages!1yyiivk": {
+      "diffEnabled": false,
+      "diffMethod": "custom",
+      "diffTopicPath": "",
+      "showFullMessageForDiff": false,
+      "topicPath": "/vectornav/pose",
+      "fontSize": 12
+    },
+    "3D!1bzm9v": {
+      "cameraState": {
+        "perspective": true,
+        "distance": 20,
+        "phi": 48.00410984920658,
+        "thetaOffset": 45,
+        "targetOffset": [
+          0,
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "targetOrientation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "fovy": 45,
+        "near": 0.5,
+        "far": 5000
+      },
+      "followMode": "follow-pose",
+      "scene": {},
+      "transforms": {},
+      "topics": {
+        "/voyant/point_cloud": {
+          "visible": true,
+          "colorField": "_auto_distance",
+          "colorMode": "colormap",
+          "colorMap": "turbo"
+        },
+        "/camera/left/image_raw": {
+          "visible": false,
+          "frameLocked": true,
+          "cameraInfoTopic": "/camera/left/camera_info",
+          "distance": 1,
+          "planarProjectionFactor": 0,
+          "color": "#ffffff",
+          "videoKeyframeLookbackSeconds": 5
+        },
+        "/vectornav/pose": {
+          "visible": true
+        }
+      },
+      "layers": {
+        "grid": {
+          "visible": true,
+          "drawBehind": false,
+          "frameLocked": true,
+          "label": "Grid",
+          "instanceId": "cace681b-a42f-4d85-bbd3-9ba25c32c149",
+          "layerId": "foxglove.Grid",
+          "size": 10,
+          "divisions": 10,
+          "lineWidth": 1,
+          "color": "#248eff",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "publish": {
+        "type": "point",
+        "poseTopic": "/move_base_simple/goal",
+        "pointTopic": "/clicked_point",
+        "poseEstimateTopic": "/initialpose",
+        "poseEstimateXDeviation": 0.5,
+        "poseEstimateYDeviation": 0.5,
+        "poseEstimateThetaDeviation": 0.26179939
+      },
+      "imageMode": {}
+    },
+    "Plot!3wqxa21": {
+      "paths": [
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/vectornav/velocity_body.twist.twist.angular.x",
+          "enabled": true,
+          "color": "#4e98e2"
+        },
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/vectornav/velocity_body.twist.twist.angular.y",
+          "enabled": true,
+          "color": "#f5774d"
+        },
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/vectornav/velocity_body.twist.twist.angular.z",
+          "enabled": true,
+          "color": "#f7df71"
+        }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": false,
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "sidebarDimension": 240
+    },
+    "Plot!2xo89z3": {
+      "paths": [
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/vectornav/velocity_body.twist.twist.linear.x",
+          "enabled": true,
+          "color": "#4e98e2"
+        },
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/vectornav/velocity_body.twist.twist.linear.y",
+          "enabled": true,
+          "color": "#f5774d"
+        },
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/vectornav/velocity_body.twist.twist.linear.z",
+          "enabled": true,
+          "color": "#f7df71"
+        }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": false,
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "sidebarDimension": 240
+    },
+    "Plot!2nfetms": {
+      "paths": [
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/vectornav/pose.pose.pose.position.x",
+          "enabled": true,
+          "color": "#4e98e2"
+        },
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/vectornav/pose.pose.pose.position.y",
+          "enabled": false,
+          "color": "#f5774d"
+        },
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/vectornav/pose.pose.pose.position.z",
+          "enabled": false,
+          "color": "#f7df71"
+        }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": false,
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "sidebarDimension": 240
+    }
+  },
+  "globalVariables": {},
+  "userNodes": {},
+  "playbackConfig": {
+    "speed": 1
+  },
+  "layout": {
+    "first": {
+      "first": {
+        "first": "RawMessages!3atojrk",
+        "second": "RawMessages!1yyiivk",
+        "direction": "row"
+      },
+      "second": "3D!1bzm9v",
+      "direction": "column"
+    },
+    "second": {
+      "first": {
+        "first": "Plot!2nfetms",
+        "second": "Plot!3wqxa21",
+        "direction": "column"
+      },
+      "second": "Plot!2xo89z3",
+      "direction": "column",
+      "splitPercentage": 67.57493188010899
+    },
+    "direction": "row",
+    "splitPercentage": 47.63469119579501
+  }
+}
