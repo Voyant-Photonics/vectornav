@@ -144,6 +144,9 @@ Vectornav::Vectornav(const rclcpp::NodeOptions & options) : Node("vectornav", op
   /// GPS Antenna A Offset (8.2.2)
   /// GPS Compass Baseline (8.2.3)
 
+  // GPS Antenna Offset
+  declare_parameter<std::vector<double>>("gpsAntennaOffset", {0.0, 0.0, 0.0});
+
   // Message Header
   declare_parameter<std::string>("frame_id", "vectornav");
 
@@ -668,6 +671,16 @@ bool Vectornav::configure_sensor()
       auto gps_offset = vs_->readGpsAntennaOffset();
       RCLCPP_INFO(
         get_logger(), "GPS Offset     : (%f, %f, %f)", gps_offset[0], gps_offset[1], gps_offset[2]);
+
+      std::vector<double> gpsAntennaOffset;
+      get_parameter("gpsAntennaOffset", gpsAntennaOffset);
+
+      RCLCPP_INFO(
+        get_logger(), "Setting GPS Offset to: (%f, %f, %f)", gpsAntennaOffset[0], gpsAntennaOffset[1], gpsAntennaOffset[2] 
+      );
+
+      vs_->writeGpsAntennaOffset(vn::math::vec3f(gpsAntennaOffset[0], gpsAntennaOffset[1], gpsAntennaOffset[2]), true);
+
 
       // GPS Compass Baseline
       // 8.2.3
